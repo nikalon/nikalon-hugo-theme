@@ -1,0 +1,16 @@
+name = "Nikalon Theme"
+license = "MIT"
+description = "Clean and responsive theme for blogs"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = ""
+  homepage = ""
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
