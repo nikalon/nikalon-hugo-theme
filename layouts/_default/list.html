@@ -1,7 +1,17 @@
 {{- define "main" -}}
-    <ul>
-    {{- range .Pages -}}
-        <a href="{{ .Permalink }}"><li>{{ .Title }}</li></a>
+    {{- if eq .Kind "taxonomyTerm" -}}
+        <h2>Todas las etiquetas</h2>
+
+        <ul>
+        {{- range .Pages -}}
+            <a href="{{ .Permalink }}"><li>{{ .Title }}</li></a>
+        {{- end -}}
+        </ul>
+    {{- else if eq .Kind "taxonomy" -}}
+        <h2>Artículos etiquetados con <strong>"{{ .Title }}"</strong></h2>
+
+        {{- range .Pages -}}
+            {{ partial "article_item.html" . }}
+        {{- end -}}
     {{- end -}}
-    </ul>
 {{- end -}}
