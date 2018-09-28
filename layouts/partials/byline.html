@@ -1,0 +1,4 @@
+<p>
+    Por {{ if isset .Params "author" }} {{ .Params.author }} {{ else }} Anónimo {{ end }}
+    • Publicado el <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Day }} de {{ index .Site.Data.meses (printf "%d" .Date.Month) }} de {{ .Date.Year }}</time>
+</p>
