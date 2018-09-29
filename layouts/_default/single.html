@@ -3,15 +3,13 @@
         <header>
             <h1>{{ .Title }}</h1>
             {{ partial "byline.html" . }}
-        </header>
-        <div>{{- .Content -}}</div>
-        <footer>
             <p>Etiquetas</p>
             <ul>
                 {{- range .Params.tags -}}
                     <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
                 {{- end -}}
             </ul>
-        </footer>
+        </header>
+        <div>{{- .Content -}}</div>
     </article>
 {{- end -}}
