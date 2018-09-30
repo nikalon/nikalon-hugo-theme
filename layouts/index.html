@@ -1,5 +1,5 @@
 {{- define "main" -}}
-    {{ range (.Paginate (where .Data.Pages "Type" "post")).Pages }}
+    {{ range where .Site.Pages "Type" "post" }}
         {{ partial "article_item.html" . }}
     {{ end }}
 {{- end -}}
