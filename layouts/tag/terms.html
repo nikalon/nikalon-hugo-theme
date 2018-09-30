@@ -1,0 +1,8 @@
+{{- define "main" -}}
+    <h2>Todas las etiquetas</h2>
+    <ul>
+    {{- range .Pages -}}
+        <a href="{{ .Permalink }}"><li>{{ .Title }}</li></a>
+    {{- end -}}
+    </ul>
+{{- end -}}

@@ -1,0 +1,6 @@
+{{- define "main" -}}
+    <h2>Artículos etiquetados con <strong>"{{ .Title }}"</strong></h2>
+    {{- range .Pages -}}
+        {{ partial "article_item.html" . }}
+    {{- end -}}
+{{- end -}}
