@@ -1,5 +1,7 @@
 {{- define "main" -}}
-    {{ range where .Site.Pages "Type" "post" }}
-        {{ partial "article_item.html" . }}
-    {{ end }}
+    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") -}}
+    {{- range $paginator.Pages -}}
+        {{- partial "article_item.html" . -}}
+    {{- end -}}
+    {{ partial "paginator.html" $paginator }}
 {{- end -}}

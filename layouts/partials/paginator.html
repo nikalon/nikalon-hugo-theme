@@ -1,0 +1,56 @@
+{{/*
+    Implementation of a smart paginator. The main limitation is that it only works
+    with an odd size (3, 5, 7, etc).
+
+    Use: this partial needs a .Paginator as context (.)
+*/}}
+
+{{/*
+    Number of adjacent items. For example if you set it to 3 it'll be:
+    3 previous pages + current page + 3 next pages = 7 pages long for the paginator
+*/}}
+{{- $adjacentPages := 1 -}}
+
+{{- $paginatorSize := add (mul 2 $adjacentPages) 1 -}}
+{{- $displayPagers := .Pagers -}}
+{{- $inLeftSide := le (sub .PageNumber $adjacentPages) 1 -}}
+{{- $inRightSide := lt (sub .TotalPages .PageNumber) $adjacentPages -}}
+
+{{- if $inLeftSide -}}
+    {{- $displayPagers = first $paginatorSize .Pagers -}}
+{{- else if $inRightSide -}}
+    {{- $displayPagers = last $paginatorSize .Pagers -}}
+{{- else -}}
+    {{/* Paginator is in the middle */}}
+    {{- $startIndex := sub .PageNumber $adjacentPages -}}
+    {{- $skipPagers := sub $startIndex 1 -}}
+    {{- $displayPagers = first $paginatorSize (after $skipPagers .Pagers) -}}
+{{- end -}}
+
+<nav>
+    <ul>
+        <li>
+            {{- if .HasPrev -}}
+                <a href="{{ .Prev.URL }}">Atrás</a>
+            {{- else -}}
+                Atrás
+            {{- end -}}
+        </li>
+
+        {{- range $displayPagers -}}
+            {{- if eq $.PageNumber .PageNumber -}}
+                <li>{{ .PageNumber }}</li>
+            {{- else -}}
+                <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+            {{- end -}}
+        {{- end -}}
+
+        <li>
+            {{- if .HasNext -}}
+                <a href="{{ .Next.URL }}">Siguiente</a>
+            {{- else -}}
+                Siguiente
+            {{- end -}}
+        </li>
+    </ul>
+</nav>
