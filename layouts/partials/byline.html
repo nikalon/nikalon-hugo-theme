@@ -2,7 +2,7 @@
 {{- $publishDate := .Date.Format "2006-01-02" -}}
 {{- $author := "Anónimo" -}}
 
-{{- if isset .Params "author" -}}
+{{- if and (isset .Params "author") (ne .Params.author "") -}}
     {{- $author = .Params.author -}}
 {{- end -}}
 
