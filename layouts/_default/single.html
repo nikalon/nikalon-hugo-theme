@@ -3,12 +3,15 @@
         <header>
             <h1>{{ .Title }}</h1>
             {{ partial "byline.html" . }}
-            <p>Etiquetas</p>
-            <ul>
-                {{- range .Params.tags -}}
-                    <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
-                {{- end -}}
-            </ul>
+
+            {{- if and (isset .Params "tags") (gt (len .Params.tags) 0) -}}
+                <p>Etiquetas</p>
+                <ul>
+                    {{- range .Params.tags -}}
+                        <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+                    {{- end -}}
+                </ul>
+            {{- end -}}
         </header>
         <div>{{- .Content -}}</div>
     </article>
