@@ -1,0 +1,16 @@
+<head>
+    <meta charset="UTF-8">
+    {{- $subpage := .Title -}}
+    {{- if and (eq .Kind "taxonomyTerm") (eq .Data.Plural "tags" ) -}}
+        {{- $subpage = "Todas las etiquetas" -}}
+    {{- else if and (eq .Kind "taxonomy") (eq .Data.Plural "tags") -}}
+        {{- $subpage = printf "Artículos etiquetados con %s" .Title -}}
+    {{- end -}}
+    <title>
+        {{- if eq .Kind "home" -}}
+            {{- .Site.Title -}}
+        {{- else -}}
+            {{- printf "%s - %s" $subpage .Site.Title -}}
+        {{- end -}}
+    </title>
+</head>
