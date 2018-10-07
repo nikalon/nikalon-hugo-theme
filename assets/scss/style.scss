@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+
+
+// Header
+.header {
+    flex: 0 0 auto;
+}
+
+.header__title { }
+
+
+
+// Body
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.paginator-space {
+    display: flex;
+    align-items: flex-end;
+    flex: 1 0 auto;
+}
+
+.paginator { }
+
+
+
+// Footer
+.footer {
+    flex: 0 0 auto;
+}
