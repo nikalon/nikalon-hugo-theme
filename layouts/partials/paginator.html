@@ -27,30 +27,32 @@
     {{- $displayPagers = first $paginatorSize (after $skipPagers .Pagers) -}}
 {{- end -}}
 
-<nav>
-    <ul>
-        <li>
-            {{- if .HasPrev -}}
-                <a href="{{ .Prev.URL }}">Atrás</a>
-            {{- else -}}
-                Atrás
+<div class="paginator-space">
+    <nav class="paginator">
+        <ul>
+            <li>
+                {{- if .HasPrev -}}
+                    <a href="{{ .Prev.URL }}">Atrás</a>
+                {{- else -}}
+                    Atrás
+                {{- end -}}
+            </li>
+    
+            {{- range $displayPagers -}}
+                {{- if eq $.PageNumber .PageNumber -}}
+                    <li>{{ .PageNumber }}</li>
+                {{- else -}}
+                    <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
+                {{- end -}}
             {{- end -}}
-        </li>
-
-        {{- range $displayPagers -}}
-            {{- if eq $.PageNumber .PageNumber -}}
-                <li>{{ .PageNumber }}</li>
-            {{- else -}}
-                <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
-            {{- end -}}
-        {{- end -}}
-
-        <li>
-            {{- if .HasNext -}}
-                <a href="{{ .Next.URL }}">Siguiente</a>
-            {{- else -}}
-                Siguiente
-            {{- end -}}
-        </li>
-    </ul>
-</nav>
+    
+            <li>
+                {{- if .HasNext -}}
+                    <a href="{{ .Next.URL }}">Siguiente</a>
+                {{- else -}}
+                    Siguiente
+                {{- end -}}
+            </li>
+        </ul>
+    </nav>
+</div>
