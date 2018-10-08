@@ -2,10 +2,10 @@
     {{- if isset .Site.Params "footerlinks" -}}
         {{- if gt (len .Site.Params.footerLinks) 0 -}}
             <nav>
-                <ul>
+                <ul class="footer__pages">
                     {{- range .Site.Params.footerLinks -}}
                         {{- with $.Site.GetPage "section" . -}}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <li><a class="footer__pages__item" href="{{ .Permalink }}">{{ .Title }}</a></li>
                         {{- else -}}
                             <li>{{ . }}</li>
                         {{- end -}}

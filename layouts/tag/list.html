@@ -1,8 +1,10 @@
 {{- define "main" -}}
-    <h2>Artículos etiquetados con <strong>"{{ .Title }}"</strong></h2>
-    {{- $paginator := .Paginator -}}
-    {{- range $paginator.Pages -}}
-        {{ partial "article_item.html" . }}
-    {{- end -}}
+    <main class="main">
+        <h2>Artículos etiquetados con <strong>"{{ .Title }}"</strong></h2>
+        {{- $paginator := .Paginator -}}
+        {{- range $paginator.Pages -}}
+            {{ partial "article_item.html" . }}
+        {{- end -}}
+    </main>
     {{- partial "paginator.html" $paginator -}}
 {{- end -}}
