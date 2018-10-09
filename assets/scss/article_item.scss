@@ -1,0 +1,52 @@
+@import './colors.scss';
+
+.article * {
+    margin: 0;
+    padding: 0;
+}
+
+.article {
+    margin-bottom: 3rem;
+}
+
+.article__cover {
+    height: auto;
+    width: 100%;
+}
+
+.article__title {
+    color: $article-item-title;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.article__title > h1 {
+    margin: 0.8rem 0;
+}
+
+.byline {
+    margin: 0.8rem 0;
+    color: $article-item-byline;
+    font-size: 1.2rem;
+}
+
+.byline__author {
+    font-weight: bold;
+}
+
+.article__description {
+    margin-top: 0.8rem;
+    padding-bottom: 2rem;
+    color: $article-item-description;
+    border-bottom: 1px solid $article-item-separator;
+}
+
+// Remove line separator and padding for the last article in the list
+.article:last-of-type {
+    margin: 0;
+
+    .article__description {
+        padding: 0;
+        border: none;
+    }
+}
