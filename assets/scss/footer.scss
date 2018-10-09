@@ -26,13 +26,17 @@
     padding-left: 0.75rem;
 }
 
+.footer__pages > li:nth-child(1) {
+    padding: 0;
+}
+
 .footer__pages > li::before {
     content: "•";
     padding-right: 0.75rem;
 }
 
 .footer__pages > li:nth-child(1)::before {
-    content: "";
+    content: unset;
     padding: 0;
 }
 
