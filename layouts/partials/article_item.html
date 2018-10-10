@@ -1,8 +1,10 @@
 <article class="article">
-    {{- if and (isset .Params "cover") (ne .Params.cover "") -}}
-        <img class="article__cover" src="{{ .Params.cover }}" alt="{{ .Title }}">
-    {{- end -}}
-    <a class="article__title" href="{{ .Permalink }}"><h1>{{- .Title -}}</h1></a>
+    <a class="article__title" href="{{ .Permalink | absURL }}">
+        {{- if and (isset .Params "cover") (ne .Params.cover "") -}}
+            <img class="article__cover" src="{{ .Params.cover | absURL }}" alt="{{ .Title }}">
+        {{- end -}}
+        <h1>{{- .Title -}}</h1>
+    </a>
     {{ partial "byline.html" . }}
     <p class="article__description reading-font">{{- .Summary -}}</p>
 </article>
