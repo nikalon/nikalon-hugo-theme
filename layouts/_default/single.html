@@ -2,16 +2,24 @@
     <main class="main">
         <article>
             <header>
+                {{- if .Params.cover -}}
+                    {{- if ne .Params.cover "" -}}
+                        <img src="{{ .Params.cover | absURL }}" alt="{{ .Title }}">
+                    {{- end -}}
+                {{- end -}}
+
                 <h1>{{ .Title }}</h1>
                 {{ partial "byline.html" . }}
 
-                {{- if and (isset .Params "tags") (gt (len .Params.tags) 0) -}}
-                    <p>Etiquetas</p>
-                    <ul>
-                        {{- range .Params.tags -}}
-                            <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
-                        {{- end -}}
-                    </ul>
+                {{- if isset .Params "tags" -}}
+                    {{- if gt (len .Params.tags) 0 -}}
+                        <p>Etiquetas</p>
+                        <ul>
+                            {{- range .Params.tags -}}
+                                <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+                            {{- end -}}
+                        </ul>
+                    {{- end -}}
                 {{- end -}}
             </header>
             <div>{{- .Content -}}</div>
