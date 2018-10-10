@@ -7,6 +7,7 @@
 
 .article {
     margin-bottom: 3rem;
+    border-bottom: 1px solid $article-item-separator;
 }
 
 .article__cover {
@@ -38,7 +39,6 @@
     margin-top: 0.8rem;
     padding-bottom: 2rem;
     color: $article-item-description;
-    border-bottom: 1px solid $article-item-separator;
 }
 
 // Remove line separator and padding for the last article in the list
