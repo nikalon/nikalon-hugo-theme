@@ -18,8 +18,9 @@ body * {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-@import './reading-font.scss';
+@import './footer.scss';
 @import './header.scss';
 @import './main.scss';
 @import './paginator.scss';
-@import './footer.scss';
+@import './reading-font.scss';
+@import './single.scss';
