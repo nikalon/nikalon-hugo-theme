@@ -4,25 +4,25 @@
             <header>
                 {{- if .Params.cover -}}
                     {{- if ne .Params.cover "" -}}
-                        <img src="{{ .Params.cover | absURL }}" alt="{{ .Title }}">
+                        <img class="article__cover" src="{{ .Params.cover | absURL }}" alt="{{ .Title }}">
                     {{- end -}}
                 {{- end -}}
 
-                <h1>{{ .Title }}</h1>
+                <h1 class="article__title">{{ .Title }}</h1>
                 {{ partial "byline.html" . }}
 
                 {{- if isset .Params "tags" -}}
                     {{- if gt (len .Params.tags) 0 -}}
-                        <p>Etiquetas</p>
-                        <ul>
+                        <p class="tags-title">Etiquetas</p>
+                        <ul class="tags">
                             {{- range .Params.tags -}}
-                                <li><a href="/tags/{{ . | urlize }}">{{ . }}</a></li>
+                                <li class="tags__item"><a class="tags__link" href="/tags/{{ . | urlize }}">{{ . }}</a></li>
                             {{- end -}}
                         </ul>
                     {{- end -}}
                 {{- end -}}
             </header>
-            <div>{{- .Content -}}</div>
+            <div class="reading-font">{{- .Content -}}</div>
         </article>
     </main>
 {{- end -}}

@@ -1,0 +1,33 @@
+@import './colors.scss';
+
+.tags-title {
+    margin: 0;
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: $article-tag-title;
+    font-size: 1.4rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.tags__item {
+    display: flex;
+    margin-right: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.tags__link {
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 2px;
+    background-color: $article-tag-background;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
