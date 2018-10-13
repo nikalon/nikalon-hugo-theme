@@ -15,14 +15,14 @@
     width: 100%;
 }
 
-.article__title {
-    color: $article-item-title;
-    font-size: 2.5rem;
+.article__link {
     text-decoration: none;
 }
 
-.article__title > h1 {
+.article__title {
     margin: 0.8rem 0;
+    color: $article-item-title;
+    font-size: 3.7rem;
 }
 
 .byline {
