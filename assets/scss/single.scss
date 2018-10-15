@@ -31,3 +31,17 @@
     text-decoration: none;
     text-transform: uppercase;
 }
+
+.tags__link:hover {
+    background-color: $article-tag-hover-background;
+}
+
+.tags__link:focus {
+    outline: 2px dotted $article-tag-outline;
+    outline-offset: 0.2rem;
+}
+
+.tags__link:active {
+    background-color: $article-tag-hover-background;
+    outline: none;
+}
