@@ -1,4 +1,70 @@
+@import './colors.scss';
+
 .paginator {
-    // TODO: remove this
-    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0 1.6rem;
+    height: 7rem;
+
+    list-style: none;
+    background-color: $paginator-background;
+}
+
+.paginator__page {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+}
+
+// Page numbers
+.paginator__page__link {
+    height: 3rem;
+    width: 3rem;
+
+    color: $paginator-link;
+    border-radius: 50%;
+    background-color: $paginator-link-background;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 3rem;
+}
+
+.paginator__page__link:hover {
+    background-color: $paginator-link-hover-background;
+}
+
+.paginator__page__link--current {
+    color: $paginator-current;
+    background-color: $paginator-current-background !important;
+}
+
+// Side link navigators
+.paginator__page__navigator {
+    color: #000000ff;
+    height: 3rem;
+    line-height: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.paginator__page__navigator:hover {
+    color: $paginator-navigator-hover;
+}
+
+.paginator__page__navigator:focus {
+    outline: 1px dotted black;
+    outline-offset: 0.2rem;
+}
+
+.paginator__page__navigator:active {
+    color: $paginator-navigator-hover;
+    outline: none;
+}
+
+.paginator__page__navigator--disabled {
+    visibility: hidden;
 }
