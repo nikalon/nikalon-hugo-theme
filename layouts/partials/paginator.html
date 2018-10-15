@@ -9,7 +9,7 @@
     Number of adjacent items. For example if you set it to 3 it'll be:
     3 previous pages + current page + 3 next pages = 7 pages long for the paginator
 */}}
-{{- $adjacentPages := 1 -}}
+{{- $adjacentPages := 2 -}}
 
 {{- $paginatorSize := add (mul 2 $adjacentPages) 1 -}}
 {{- $displayPagers := .Pagers -}}
@@ -27,29 +27,31 @@
     {{- $displayPagers = first $paginatorSize (after $skipPagers .Pagers) -}}
 {{- end -}}
 
-<nav class="paginator">
-    <ul>
-        <li>
+<nav>
+    <ul class="paginator">
+        <li class="paginator__page">
             {{- if .HasPrev -}}
-                <a href="{{ .Prev.URL }}">Atrás</a>
+                <a class="paginator__page__navigator" href="{{ .Prev.URL }}">Atrás</a>
             {{- else -}}
-                Atrás
+                <span class="paginator__page__navigator paginator__page__navigator--disabled">Atrás</span>
             {{- end -}}
         </li>
 
         {{- range $displayPagers -}}
-            {{- if eq $.PageNumber .PageNumber -}}
-                <li>{{ .PageNumber }}</li>
-            {{- else -}}
-                <li><a href="{{ .URL }}">{{ .PageNumber }}</a></li>
-            {{- end -}}
+            <li class="paginator__page">
+                {{- if eq $.PageNumber .PageNumber -}}
+                        <span class="paginator__page__link paginator__page__link--current">{{ .PageNumber }}</span>
+                {{- else -}}
+                        <a class="paginator__page__link" href="{{ .URL }}">{{ .PageNumber }}</a>
+                {{- end -}}
+            </li>
         {{- end -}}
 
-        <li>
+        <li class="paginator__page">
             {{- if .HasNext -}}
-                <a href="{{ .Next.URL }}">Siguiente</a>
+                <a class="paginator__page__navigator" href="{{ .Next.URL }}">Siguiente</a>
             {{- else -}}
-                Siguiente
+                <span class="paginator__page__navigator paginator__page__navigator--disabled">Siguiente</span>
             {{- end -}}
         </li>
     </ul>
