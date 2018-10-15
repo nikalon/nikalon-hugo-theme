@@ -44,9 +44,9 @@
 // Remove line separator and padding for the last article in the list
 .article:last-of-type {
     margin: 0;
+    border: none;
 
     .article__description {
         padding: 0;
-        border: none;
     }
 }
