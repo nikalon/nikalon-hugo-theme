@@ -1,0 +1,24 @@
+@import './colors.scss';
+
+ul.ul-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.all-tags {
+    font-size: 1.8rem;
+}
+
+.all-tags__item {
+    margin: 2rem 0;
+}
+
+.all-tags__badge {
+    margin-right: 1rem;
+    padding: 0.2rem 1.2rem;
+    color: $tag-badge-text;
+    background-color: $tag-badge-background;
+    border-radius: 50rem;
+    font-size: 1.6rem;
+}
