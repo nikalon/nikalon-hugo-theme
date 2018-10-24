@@ -53,7 +53,7 @@ tags: ["technology", "arts", "music"]
 ```
 
 # Customization
-There are some sections of the page that you can customize to your own needs by replacing HTML blocks.
+There are some sections of the page that you can customize to your own needs by replacing HTML blocks or setting some extra variables in config.toml.
 
 ## Copyright
 You can customize the copyright notice however you want. Create `layouts/partials/copyright.html` and put whatever you want.
