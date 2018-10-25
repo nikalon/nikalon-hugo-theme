@@ -6,4 +6,9 @@
     {{- $author = .Params.author -}}
 {{- end -}}
 
-<p class="byline">Por <span class="byline__author">{{ print $author }}</span> • Publicado el <time dateTime="{{ print $publishDate }}">{{ print $displayPublishDate }}</time></p>
+<p class="byline">
+    Por <span class="byline__author">{{ print $author }}</span>
+    <span class="byline__publication-date">
+        Publicado el <time dateTime="{{ print $publishDate }}">{{ print $displayPublishDate }}</time>
+    </span>
+</p>
