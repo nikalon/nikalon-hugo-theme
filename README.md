@@ -10,7 +10,7 @@ This theme expects your posts to be located in `content/post`. An example of a p
 Whenever you want to create a new post you can issue the command `hugo new post/new-post.md` where *new-post.md* can be the name you want. Your post will be located in `content/post/new-post.md` and you can start writing it.
 
 # Post variables
-By default this theme will generate a webpage with a title and text content for every single post you create. You can alter the way the posts are shown by setting a few variables in the [front matter](https://gohugo.io/content-management/front-matter).
+By default this theme will generate a web page with a title and text content for every single post you create. You can alter the way the posts are shown by setting a few variables in the [front matter](https://gohugo.io/content-management/front-matter).
 
 ## Article picture
 A picture is worth a thousand words. You can set an image to be displayed in the list of articles and the article itself.
@@ -68,7 +68,7 @@ Modify `config.toml` to add the following variable:
   footerLinks = ["about", "contact", "post"]
 ```
 
-You can add as many pages in the **footerLinks** variables as you want. But keep in mind that this theme expects that you have those pages created.
+You can add as many pages in **footerLinks** as you want. But keep in mind that this theme expects that you have those pages created.
 
 In the example above it's expected to have the following pages created or otherwise the links will not be created:
 
