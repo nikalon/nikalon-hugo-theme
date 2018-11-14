@@ -1,5 +1,5 @@
-{{- $displayPublishDate := printf "%d de %s de %d" .Date.Day (index .Site.Data.meses (printf "%d" .Date.Month)) .Date.Year -}}
 {{- $publishDate := .Date.Format "2006-01-02" -}}
+
 {{- $author := "Anónimo" -}}
 
 {{- if and (isset .Params "author") (ne .Params.author "") -}}
@@ -7,8 +7,8 @@
 {{- end -}}
 
 <p class="byline">
-    Por <span class="byline__author">{{ print $author }}</span>
+    {{ T "WrittenBy" }} <span class="byline__author">{{ print $author }}</span>
     <span class="byline__publication-date">
-        Publicado el <time dateTime="{{ print $publishDate }}">{{ print $displayPublishDate }}</time>
+        {{ T "PublishedOn" }} <time dateTime="{{ print $publishDate }}">{{ T "PublishDate" . }}</time>
     </span>
 </p>
