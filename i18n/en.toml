@@ -1,0 +1,17 @@
+[AllTags]
+other = "All tags"
+
+[PublishedOn]
+other = "Published on"
+
+[PublishDate]
+other = "{{ .PublishDate.Month }} {{ .PublishDate.Day }}, {{ .PublishDate.Year }}"
+
+[Tags]
+other = "Tags"
+
+[TaggedAs]
+other = "Articles tagged as <strong>{{ .Title }}</strong>"
+
+[WrittenBy]
+other = "By"

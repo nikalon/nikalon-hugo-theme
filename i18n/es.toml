@@ -1,0 +1,18 @@
+[AllTags]
+other = "Todas las etiquetas"
+
+[PublishedOn]
+other = "Publicado el"
+
+[PublishDate]
+# FIXME: Remove this nasty hack for localizing the month into spanish once Hugo supports internationalized dates
+other = "{{ .PublishDate.Day }} de {{ index .Site.Data.i18n.months.es (printf \"%d\" .Date.Month) }} de {{ .PublishDate.Year }}"
+
+[Tags]
+other = "Etiquetas"
+
+[TaggedAs]
+other = "Artículos etiquetados con <strong>{{ .Title }}</strong>"
+
+[WrittenBy]
+other = "Por"

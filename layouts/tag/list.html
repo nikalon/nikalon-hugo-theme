@@ -1,6 +1,6 @@
 {{- define "main" -}}
     <main class="main">
-        <h2 class="title-2">Artículos etiquetados con <strong>"{{ .Title }}"</strong></h2>
+        <h2 class="title-2">{{ T "TaggedAs" . | safeHTML }}</h2>
         {{- $paginator := .Paginator -}}
         {{- range $paginator.Pages -}}
             {{ partial "article_item.html" . }}
