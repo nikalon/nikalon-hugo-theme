@@ -1,14 +1,11 @@
-{{- $publishDate := .Date.Format "2006-01-02" -}}
-
 {{- $author := "Anónimo" -}}
-
 {{- if and (isset .Params "author") (ne .Params.author "") -}}
     {{- $author = .Params.author -}}
 {{- end -}}
 
 <p class="byline">
-    {{ T "WrittenBy" }} <span class="byline__author">{{ print $author }}</span>
+    {{ T "WrittenBy" $author | safeHTML }}
     <span class="byline__publication-date">
-        {{ T "PublishedOn" }} <time dateTime="{{ print $publishDate }}">{{ T "PublishDate" . }}</time>
+        {{ T "PublishDate" . | safeHTML }}
     </span>
 </p>

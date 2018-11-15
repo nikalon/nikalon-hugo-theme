@@ -1,12 +1,9 @@
 [AllTags]
 other = "Todas las etiquetas"
 
-[PublishedOn]
-other = "Publicado el"
-
 [PublishDate]
 # FIXME: Remove this nasty hack for localizing the month into spanish once Hugo supports internationalized dates
-other = "{{ .PublishDate.Day }} de {{ index .Site.Data.i18n.months.es (printf \"%d\" .Date.Month) }} de {{ .PublishDate.Year }}"
+other = "Publicado el <time dateTime=\"{{ .PublishDate.Format \"2006-01-02\" }}\">{{ .PublishDate.Day }} de {{ index $.Site.Data.i18n.months.es (printf \"%d\" .PublishDate.Month) }} de {{ .PublishDate.Year }}</time>"
 
 [Tags]
 other = "Etiquetas"
@@ -15,4 +12,4 @@ other = "Etiquetas"
 other = "Artículos etiquetados con <strong>{{ .Title }}</strong>"
 
 [WrittenBy]
-other = "Por"
+other = "Por <strong>{{ .Count }}</strong>"
