@@ -77,3 +77,76 @@ content/about/_index.md
 content/contact/_index.md
 content/post/_index.md
 ```
+# Translations
+Currently only english and spanish languages are officially supported. However, it doesn't stop you from using this theme for your native tongue. If you need it you can add support for a new language or override the current text lines that are bundled with this theme.
+
+The next steps summarize how to add support for a new language or override an existing one:
+
+## 1. Create localization file
+In the root of your project create a directory named `i18n`. Inside that folder create a file named as the acronym for your language (`en.toml` for english, `it.toml` for italian, etc).
+
+## 2. Copy strings
+Now open the file `themes/nikalon-theme/i18n/en.toml`, copy all the contents and paste into the file that you created previously.
+
+## 3. Translate!
+You're going to see the following structure:
+
+```
+[AllTags]
+other = "All tags"
+
+[Tags]
+other = "Tags"
+```
+
+What you have to change is the value of `other`. For example, if you want to translate the string **"All tags"** into french you have to write something like:
+
+```
+[AllTags]
+other = "Toutes les étiquettes"
+```
+
+## **[Optional]** Translate / Override months
+
+As of Hugo v0.51 there's still no support for localized dates. It means that the months are not translated automatically. If you want to display dates with the name of the months you'll have to translate it.
+
+Create the directory `data/i18n`. Next copy the file `themes/nikalon-theme/data/i18n/months.json` and paste into the directory that you've just created. When you open the file you're going to see the following structure:
+
+```
+{
+    "es": {
+        "1": "Enero",
+        "2": "Febrero",
+        "3": "Marzo",
+        ...
+    }
+}
+```
+
+You can override the months for spanish or create the translations for a new language. To do the latter add an object named as the file that you created in step 1. 
+
+For example, if you want to add the translation for italian the structure should be this:
+
+```
+{
+    "es": {
+        "1": "Enero",
+        "2": "Febrero",
+        "3": "Marzo",
+        ...
+    },
+    "it": {
+        "1": "Gennaio",
+        "2": "Febbraio",
+        "3": "Marzo",
+        ...
+    }
+}
+```
+Make sure to access the months that you've just created in the file that you created in step 1. In `PublishDate` you have yo add this syntax to translate the months into your language:
+
+```
+{{ index $.Site.Data.i18n.months.es (printf \"%d\" .PublishDate.Month) }}
+```
+
+Take a look into `themes/nikalon-theme/i18n/es.toml` as reference.
