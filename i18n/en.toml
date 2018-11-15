@@ -1,11 +1,8 @@
 [AllTags]
 other = "All tags"
 
-[PublishedOn]
-other = "Published on"
-
 [PublishDate]
-other = "{{ .PublishDate.Month }} {{ .PublishDate.Day }}, {{ .PublishDate.Year }}"
+other = "Published on {{ .PublishDate.Format \"January 2, 2006\" }}"
 
 [Tags]
 other = "Tags"
@@ -14,4 +11,4 @@ other = "Tags"
 other = "Articles tagged as <strong>{{ .Title }}</strong>"
 
 [WrittenBy]
-other = "By"
+other = "By <strong>{{ .Count }}</strong>"
