@@ -1,4 +1,4 @@
-{{- $author := "Anónimo" -}}
+{{- $author := T "Anonymous" -}}
 {{- if and (isset .Params "author") (ne .Params.author "") -}}
     {{- $author = .Params.author -}}
 {{- end -}}
