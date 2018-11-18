@@ -1,6 +1,9 @@
 [AllTags]
 other = "All tags"
 
+[Anonymous]
+other = "Anonymous"
+
 [PublishDate]
 other = "Published on {{ .PublishDate.Format \"January 2, 2006\" }}"
 
