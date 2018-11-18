@@ -8,6 +8,9 @@ other = "Anónimo"
 # FIXME: Remove this nasty hack for localizing the month into spanish once Hugo supports internationalized dates
 other = "Publicado el <time dateTime=\"{{ .PublishDate.Format \"2006-01-02\" }}\">{{ .PublishDate.Day }} de {{ index $.Site.Data.i18n.months.es (printf \"%d\" .PublishDate.Month) }} de {{ .PublishDate.Year }}</time>"
 
+[SeeAllTags]
+other = "Ver todas las etiquetas"
+
 [Tags]
 other = "Etiquetas"
 
