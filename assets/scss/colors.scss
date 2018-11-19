@@ -1,29 +1,30 @@
-$article-item-title: #1a1a1aff;
-$article-item-byline: #4d4d4dff;
-$article-item-description: #333333ff;
-$article-item-separator: #c8c8c8ff;
+$article-item-title: rgba(#1a1a1a, 1);
+$article-item-byline: rgba(#4d4d4d, 1);
+$article-item-description: rgba(#333333, 1);
+$article-item-separator: rgba(#c8c8c8, 1);
 
-$article-tag-title: #4d4d4dff;
-$article-tag-outline: #4b4b4bff;
-$article-tag-background: #1d2d33ff;
-$article-tag-hover-background: #3a5a66ff;
+$article-tag-title: rgba(#4d4d4d, 1);
+$article-tag-outline: rgba(#4b4b4b, 1);
+$article-tag-background: rgba(#1d2d33, 1);
+$article-tag-hover-background: rgba(#3a5a66, 1);
 
-$background: #f6f5ffff;
+$background: rgba(#f6f5ff, 1);
 
-$footer-background: #1d2d33ff;
-$footer-text: #ffffff;
+$footer-background: rgba(#1d2d33, 1);
+$footer-text: rgba(#ffffff, 1);
 
-$header-background: #1d2d33ff;
-$header-title: #ffffff;
-$header-link: #0045c2ff;
+$header-background: rgba(#1d2d33, 1);
+$header-title: rgba(#ffffff, 1);
+$header-link: rgba(#0045c2, 1);
 
-$paginator-background: #f6f5ffff;
-$paginator-link: #000000ff;
+$paginator-background: rgba(#f6f5ff, 1);
+$paginator-link: rgba(#000000, 1);
 $paginator-link-background: transparent;
-$paginator-link-hover-background: #cddde1ff;
-$paginator-current: #ffffffff;
-$paginator-current-background: #2f4953ff;
-$paginator-navigator-hover: #2f4953ff;
+$paginator-link-hover-background: rgba(#cddde1, 1);
+$paginator-current: rgba(#ffffff, 1);
+$paginator-current-background: rgba(#2f4953, 1);
+$paginator-navigator: rgba(#000000, 1);
+$paginator-navigator-hover: rgba(#2f4953, 1);
 
-$tag-badge-background: #1d6065ff;
-$tag-badge-text: #ffffffff;
+$tag-badge-background: rgba(#1d6065, 1);
+$tag-badge-text: rgba(#ffffff, 1);
