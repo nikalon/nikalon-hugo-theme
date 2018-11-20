@@ -5,7 +5,7 @@ other = "All tags"
 other = "Anonymous"
 
 [PublishDate]
-other = "Published on {{ .PublishDate.Format \"January 2, 2006\" }}"
+other = "Published on <time dateTime=\"{{ .PublishDate.Format \"2006-01-02\" }}\">{{ .PublishDate.Format \"January 2, 2006\" }}</time>"
 
 [SeeAllTags]
 other = "See all tags"
