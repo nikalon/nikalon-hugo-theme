@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
 
-    margin: 0;
-    padding: 0 1.6rem;
+    margin: 0 auto;
+    padding: 0;
     height: 7rem;
+    max-width: 450px;
 
     list-style: none;
-    background-color: $paginator-background;
 }
 
 .paginator__page {
