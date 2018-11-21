@@ -1,13 +1,15 @@
 {{- define "main" -}}
-    <main class="main">
-        <h2 class="title title-2">{{ T "AllTags" }}</h2>
-        <ul class="all-tags ul-reset">
-        {{- range .Pages -}}
-            <li class="all-tags__item">
-                <span class="all-tags__badge">{{ len .Pages }}</span>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
-        {{- end -}}
-        </ul>
-    </main>
+    <div class="main-container">
+        <main class="main">
+            <h2 class="title title-2">{{ T "AllTags" }}</h2>
+            <ul class="all-tags ul-reset">
+            {{- range .Pages -}}
+                <li class="all-tags__item">
+                    <span class="all-tags__badge">{{ len .Pages }}</span>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            {{- end -}}
+            </ul>
+        </main>
+    </div>
 {{- end -}}

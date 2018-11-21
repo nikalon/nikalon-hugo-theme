@@ -1,9 +1,11 @@
 {{- define "main" -}}
-    <main class="main">
-        {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") -}}
-        {{- range $paginator.Pages -}}
-            {{- partial "article_item.html" . -}}
-        {{- end -}}
-    </main>
-    {{ partial "paginator.html" $paginator }}
+    <div class="main-container">
+        <main class="main">
+            {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") -}}
+            {{- range $paginator.Pages -}}
+                {{- partial "article_item.html" . -}}
+            {{- end -}}
+        </main>
+        {{ partial "paginator.html" $paginator }}
+    </div>
 {{- end -}}
