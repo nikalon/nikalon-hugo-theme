@@ -4,6 +4,12 @@ other = "Todas las etiquetas"
 [Anonymous]
 other = "Anónimo"
 
+[Back]
+other = "Atrás"
+
+[Next]
+other = "Siguiente"
+
 [PublishDate]
 # FIXME: Remove this nasty hack for localizing the month into spanish once Hugo supports internationalized dates
 other = "Publicado el <time dateTime=\"{{ .PublishDate.Format \"2006-01-02\" }}\">{{ .PublishDate.Day }} de {{ index $.Site.Data.i18n.months.es (printf \"%d\" .PublishDate.Month) }} de {{ .PublishDate.Year }}</time>"
