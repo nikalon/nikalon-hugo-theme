@@ -5,7 +5,7 @@
                 <ul class="footer__pages">
                     {{- range .Site.Params.footerLinks -}}
                         {{- with $.Site.GetPage "section" . -}}
-                            <li><a class="footer__pages__item" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            <li><a class="footer__pages__item" href="{{ .Permalink | relURL }}">{{ .Title }}</a></li>
                         {{- else -}}
                             <li>{{ . }}</li>
                         {{- end -}}

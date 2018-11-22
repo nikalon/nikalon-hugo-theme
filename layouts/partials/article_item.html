@@ -1,7 +1,7 @@
 <article class="article">
-    <a class="article__link" href="{{ .Permalink | absURL }}">
+    <a class="article__link" href="{{ .Permalink | relURL }}">
         {{- if and (isset .Params "cover") (ne .Params.cover "") -}}
-            <img class="article__cover" src="{{ .Params.cover | absURL }}" alt="{{ .Title }}">
+            <img class="article__cover" src="{{ .Params.cover | relURL }}" alt="{{ .Title }}">
         {{- end -}}
         <h1 class="article__title">{{- .Title -}}</h1>
     </a>

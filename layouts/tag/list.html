@@ -2,7 +2,8 @@
     <div class="main-container">
         <main class="main">
             <h2 class="title title-2">{{ T "TaggedAs" . | safeHTML }}</h2>
-            <a href="/tags" class="title-link"><h3 class="title title-3">{{ T "SeeAllTags" }}</h3></a>
+            {{- $tags := "tags" -}}
+            <a href="{{ $tags | relURL }}" class="title-link"><h3 class="title title-3">{{ T "SeeAllTags" }}</h3></a>
             {{- $paginator := .Paginator -}}
             {{- range $paginator.Pages -}}
                 {{ partial "article_item.html" . }}

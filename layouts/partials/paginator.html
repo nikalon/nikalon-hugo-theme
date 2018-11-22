@@ -31,7 +31,7 @@
     <ul class="paginator">
         <li class="paginator__page">
             {{- if .HasPrev -}}
-                <a class="paginator__page__navigator" href="{{ .Prev.URL }}">{{ T "Back" }}</a>
+                <a class="paginator__page__navigator" href="{{ .Prev.URL | relURL }}">{{ T "Back" }}</a>
             {{- else -}}
                 <span class="paginator__page__navigator paginator__page__navigator--disabled">Atrás</span>
             {{- end -}}
@@ -42,14 +42,14 @@
                 {{- if eq $.PageNumber .PageNumber -}}
                         <span class="paginator__page__link paginator__page__link--current">{{ .PageNumber }}</span>
                 {{- else -}}
-                        <a class="paginator__page__link" href="{{ .URL }}">{{ .PageNumber }}</a>
+                        <a class="paginator__page__link" href="{{ .URL | relURL }}">{{ .PageNumber }}</a>
                 {{- end -}}
             </li>
         {{- end -}}
 
         <li class="paginator__page">
             {{- if .HasNext -}}
-                <a class="paginator__page__navigator" href="{{ .Next.URL }}">{{ T "Next" }}</a>
+                <a class="paginator__page__navigator" href="{{ .Next.URL | relURL }}">{{ T "Next" }}</a>
             {{- else -}}
                 <span class="paginator__page__navigator paginator__page__navigator--disabled">Siguiente</span>
             {{- end -}}

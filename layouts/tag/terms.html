@@ -6,7 +6,7 @@
             {{- range .Pages -}}
                 <li class="all-tags__item">
                     <span class="all-tags__badge">{{ len .Pages }}</span>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
                 </li>
             {{- end -}}
             </ul>
