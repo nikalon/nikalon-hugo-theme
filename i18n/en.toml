@@ -4,6 +4,12 @@ other = "All tags"
 [Anonymous]
 other = "Anonymous"
 
+[Back]
+other = "Back"
+
+[Next]
+other = "Next"
+
 [PublishDate]
 other = "Published on <time dateTime=\"{{ .PublishDate.Format \"2006-01-02\" }}\">{{ .PublishDate.Format \"January 2, 2006\" }}</time>"
 
