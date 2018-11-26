@@ -6,6 +6,8 @@
     align-items: center;
     height: 7rem;
     background-color: $header-background;
+    box-shadow: 0 0 1px 3px $header-shadow;
+    z-index: 100;
 }
 
 .header__title {
