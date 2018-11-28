@@ -9,3 +9,9 @@
 .byline__publication-date::before {
     content: "•";
 }
+
+@media (min-width: 600px) {
+    .byline {
+        font-size: 1.4rem;
+    }
+}

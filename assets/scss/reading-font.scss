@@ -1,4 +1,11 @@
 .reading-font, .reading-font * {
     font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
     line-height: 1.8;
+}
+
+@media (min-width: 600px) {
+    .reading-font, .reading-font * {
+        font-size: 1.8rem;
+    }
 }
