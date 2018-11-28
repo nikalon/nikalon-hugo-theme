@@ -14,16 +14,12 @@ body {
     background-color: $background;
 }
 
-body * {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
 @import './byline.scss';
 @import './footer.scss';
 @import './header.scss';
 @import './main.scss';
 @import './paginator.scss';
-@import './reading-font.scss';
+@import './fonts.scss';
 @import './single.scss';
 @import './tag_list.scss';
 @import './tag_terms.scss'

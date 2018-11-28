@@ -12,11 +12,17 @@
 
 .header__title {
     color: $header-title;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
+}
+
+@media (min-width: 600px) {
+    .header__title {
+        font-size: 1.6rem;
+    }
 }
 
 .header__title > h1 {
     margin: 0;
-    font-weight: lighter;
+    font-family: "Montserrat", "Verdana", "Arial", sans-serif;
 }

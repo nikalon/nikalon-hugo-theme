@@ -11,9 +11,9 @@
 
     width: 100%;
     background-color: $background-card;
-    border: 1px solid $background-shadow;
+    border: none;
+    max-width: 880px;
     box-sizing: border-box;
-    max-width: 800px;
 }
 
 @media (min-width: 500px) {
@@ -27,6 +27,7 @@
         margin: 4rem auto;
         padding: 40px 60px;
         border-radius: 1rem;
+        border: 1px solid $background-shadow;
         box-shadow: 0 0 20px $background-shadow;
     }
 }
