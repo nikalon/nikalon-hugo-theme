@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.title > * {
+    font-family: "Montserrat", "Verdana", "Arial", sans-serif;
+}
+
 .title-link {
     color: $header-link;
     text-decoration: none;
