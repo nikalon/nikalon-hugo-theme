@@ -1,3 +1,4 @@
+/* Blocks of elements */
 $article-item-title: rgba(#1a1a1a, 1);
 $article-item-byline: rgba(#4d4d4d, 1);
 $article-item-description: rgba(#333333, 1);
@@ -31,3 +32,16 @@ $paginator-navigator-hover: rgba(#2f4953, 1);
 
 $tag-badge-background: rgba(#1d6065, 1);
 $tag-badge-text: rgba(#ffffff, 1);
+
+
+/* Common HTML elements for reading section */
+$link-color: rgba(#20606c, 1);
+$link-visited: rgba(#551a8b, 1);
+$link-active: rgba(#5f9090, 1);
+
+$pre-background: rgba(#c6c6c6, 1);
+$pre-border: rgba(#9da2a4, 1);
+
+$table-thead-background: rgba(#343f44, 1);
+$table-border: rgba(#ccc, 1);
+$table-tr-background-darker: rgba(#e3e3e3, 1);

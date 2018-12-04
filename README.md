@@ -3,6 +3,7 @@ Lightweight and responsive theme designed for blogs. It uses minimal resources t
 
 ## Table of contents
 * [Requirements](#requirements)
+* [Setting up](#setting-up)
 * [Create posts](#create-posts)
 * [Post variables](#post-variables)
 * [Customization](#customization)
@@ -10,6 +11,31 @@ Lightweight and responsive theme designed for blogs. It uses minimal resources t
 
 ## Requirements
 This theme was designed against **Hugo v0.49.2 extended**. Your installation of Hugo requires support for Saas/SCSS pipelines. Please follow the instructions for your platform [here](https://gohugo.io/getting-started/installing/).
+
+## Setting up
+To apply this theme to your Hugo website follow this instructions. Clone or get a fresh copy of this repository.
+
+```
+git clone https://github.com/nikalon/nikalon-hugo-theme
+```
+
+Now copy the root directory named **nikalon-hugo-theme** and paste it into the **themes** directory from your Hugo website project.
+
+We're almost done! Now we need to set some things up. Open **config.toml** from your website project and set the **theme** variable to **nikalon-hugo-theme** like the following example:
+
+```
+theme = "nikalon-hugo-theme"
+```
+
+### [OPTIONAL] Enable syntax highlighting
+You can skip this part if you don't need to display code blocks into your website. Set the following variables into **config.toml** to enable code highlighting:
+```
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsOptions = "linenos=table"
+```
+
+And now you're done! Enjoy this theme. If you run into any issue report it to the [project's home page](https://github.com/nikalon/nikalon-hugo-theme/issues).
 
 ## Create posts
 This theme expects your posts to be located in `content/post`. An example of a post you can create is `content/post/my-new-post.md`

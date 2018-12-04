@@ -1,0 +1,328 @@
+.highlight {
+    margin: 18px 0;
+
+    * {
+        font-family: monospace;
+        font-size: 1.4rem;
+    }
+
+    .chroma {
+        color: #f8f8f2;
+        background-color: #272822;
+        border-radius: 3px;
+        overflow: auto;
+
+        .lntable {
+            border-spacing: 0;
+            overflow: auto;
+
+            // Rows
+            .lntd {
+                .chroma {
+                    margin: 5px 0;
+                }
+            }
+
+            // Line number row
+            .lntd:nth-child(1) {
+                padding: 0 8px;
+                background-color: #3b3b42;
+                position: sticky;
+                left: 0;
+
+                // Disable text selection
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                .chroma {
+                    // Hack for disabling background color to avoid to set the background color twice
+                    background-color: unset;
+                }
+            }
+
+            // Code row
+            .lntd:nth-child(2) {
+                padding: 0 10px;
+                vertical-align: top;
+            }
+        }
+
+
+
+        // SYNTAX COLORS
+
+        // Error
+        .err {
+            color: #960050;
+            background-color: #1e0010;
+        }
+
+        // Keyword
+        .k {
+            color: #66d9ef;
+        }
+
+        // KeywordConstant
+        .kc {
+            color: #66d9ef;
+        }
+
+        // KeywordDeclaration
+        .kd {
+            color: #66d9ef;
+        }
+
+        // KeywordNamespace
+        .kn {
+            color: #f92672;
+        }
+
+        // KeywordPseudo
+        .kp {
+            color: #66d9ef;
+        }
+
+        // KeywordReserved
+        .kr {
+            color: #66d9ef;
+        }
+
+        // KeywordType
+        .kt {
+            color: #66d9ef;
+        }
+
+        // NameAttribute
+        .na {
+            color: #a6e22e;
+        }
+
+        // NameClass
+        .nc {
+            color: #a6e22e;
+        }
+        
+        // NameConstant
+        .no {
+            color: #66d9ef;
+        }
+        
+        // NameDecorator
+        .nd {
+            color: #a6e22e;
+        }
+        
+        // NameException
+        .ne {
+            color: #a6e22e;
+        }
+        
+        // NameFunction
+        .nf {
+            color: #a6e22e;
+        }
+        
+        // NameOther
+        .nx {
+            color: #a6e22e;
+        }
+        
+        // NameTag
+        .nt {
+            color: #f92672;
+        }
+        
+        // Literal
+        .l {
+            color: #ae81ff;
+        }
+        
+        // LiteralDate
+        .ld {
+            color: #e6db74;
+        }
+        
+        // LiteralString
+        .s {
+            color: #e6db74;
+        }
+        
+        // LiteralStringAffix
+        .sa {
+            color: #e6db74;
+        }
+        
+        // LiteralStringBacktick
+        .sb {
+            color: #e6db74;
+        }
+        
+        // LiteralStringChar
+        .sc {
+            color: #e6db74;
+        }
+        
+        // LiteralStringDelimiter
+        .dl {
+            color: #e6db74;
+        }
+        
+        // LiteralStringDoc
+        .sd {
+            color: #e6db74;
+        }
+        
+        // LiteralStringDouble
+        .s2 {
+            color: #e6db74;
+        }
+        
+        // LiteralStringEscape
+        .se {
+            color: #ae81ff;
+        }
+        
+        // LiteralStringHeredoc
+        .sh {
+            color: #e6db74;
+        }
+        
+        // LiteralStringInterpol
+        .si {
+            color: #e6db74;
+        }
+        
+        // LiteralStringOther
+        .sx {
+            color: #e6db74;
+        }
+        
+        // LiteralStringRegex
+        .sr {
+            color: #e6db74;
+        }
+        
+        // LiteralStringSingle
+        .s1 {
+            color: #e6db74;
+        }
+        
+        // LiteralStringSymbol
+        .ss {
+            color: #e6db74;
+        }
+        
+        // LiteralNumber
+        .m {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberBin
+        .mb {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberFloat
+        .mf {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberHex
+        .mh {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberInteger
+        .mi {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberIntegerLong
+        .il {
+            color: #ae81ff;
+        }
+        
+        // LiteralNumberOct
+        .mo {
+            color: #ae81ff;
+        }
+        
+        // Operator
+        .o {
+            color: #f92672;
+        }
+        
+        // OperatorWord
+        .ow {
+            color: #f92672;
+        }
+        
+        // Comment
+        .c {
+            color: #75715e;
+        }
+        
+        // CommentHashbang
+        .ch {
+            color: #75715e;
+        }
+        
+        // CommentMultiline
+        .cm {
+            color: #75715e;
+        }
+        
+        // CommentSingle
+        .c1 {
+            color: #75715e;
+        }
+        
+        // CommentSpecial
+        .cs {
+            color: #75715e;
+        }
+        
+        // CommentPreproc
+        .cp {
+            color: #75715e;
+        }
+        
+        // CommentPreprocFile
+        .cpf {
+            color: #75715e;
+        }
+        
+        // GenericDeleted
+        .gd {
+            color: #f92672;
+        }
+        
+        // GenericEmph
+        .ge {
+            font-style: italic;
+        }
+        
+        // GenericInserted
+        .gi {
+            color: #a6e22e;
+        }
+        
+        // GenericStrong
+        .gs {
+            font-weight: bold;
+        }
+        
+        // GenericSubheading
+        .gu {
+            color: #75715e;
+        }    
+    }
+}
+
+@media (min-width: 500px) {
+    .highlight * {
+        font-size: 1.6rem;
+    }
+}

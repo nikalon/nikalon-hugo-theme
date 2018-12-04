@@ -1,4 +1,5 @@
 @import './article_item.scss';
+@import './colors.scss';
 
 .main {
     flex: 1 0 auto;
@@ -29,5 +30,83 @@
         border-radius: 1rem;
         border: 1px solid $background-shadow;
         box-shadow: 0 0 20px $background-shadow;
+    }
+}
+
+
+// General style for headers
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", "Verdana", "Arial", sans-serif !important;
+}
+
+
+// Styles for the reading section
+.reading-zone {
+    a:link {
+        color: $link-color;
+    }
+
+    a:visited {
+        color: $link-visited;
+    }
+
+    a:hover {
+        color: $link-color;
+    }
+
+    a:active {
+        color: $link-active;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 4rem 0 1rem 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    // Hack to avoid to select code blocks
+    pre:not(.chroma) {
+        padding: 10px;
+        border: 1px solid $pre-border;
+        border-radius: 3px;
+        white-space: normal;
+        background-color: $pre-background;
+    }
+
+    // Hack to avoid to select code blocks
+    table:not(.lntable) {
+        display: inline-block;
+        max-width: 100%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        overflow: auto;
+
+        tr:nth-child(2n) {
+            background-color: $table-tr-background-darker;
+        }
+
+        thead {
+            color: white;
+            background-color: $table-thead-background;
+
+            * {
+                font-family:  "Montserrat", "Verdana", "Arial", sans-serif;
+            }
+        }
+
+        th, td {
+            border: 1px solid $table-border;
+            padding: 4px 15px;
+        }
     }
 }
