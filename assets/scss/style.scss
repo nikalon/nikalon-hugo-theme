@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'fonts';
 
 html {
     margin: 0;
@@ -12,6 +13,10 @@ body {
     margin: 0;
     font-size: 1.6rem;
     background-color: $background-color;
+
+    * {
+        font-family: $default-font;
+    }
 }
 
 @import 'byline';
@@ -19,7 +24,6 @@ body {
 @import 'header';
 @import 'main';
 @import 'paginator';
-@import 'fonts';
 @import 'single';
 @import 'syntax-highlighter';
 @import 'tag_list';
