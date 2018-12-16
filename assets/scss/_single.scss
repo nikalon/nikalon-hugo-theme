@@ -4,7 +4,7 @@
     margin: 0;
     margin-top: 1.4rem;
     margin-bottom: 0.6rem;
-    color: $article-tag-title;
+    color: $article-tag-title-color;
 }
 
 .tags {
@@ -25,21 +25,21 @@
     color: white;
     padding: 0.8rem 1.2rem;
     border-radius: 2px;
-    background-color: $article-tag-background;
+    background-color: $article-tag-background-color;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 .tags__link:hover {
-    background-color: $article-tag-hover-background;
+    background-color: $article-tag-hover-background-color;
 }
 
 .tags__link:focus {
-    outline: 2px dotted $article-tag-outline;
+    outline: 2px dotted $article-tag-outline-color;
     outline-offset: 0.2rem;
 }
 
 .tags__link:active {
-    background-color: $article-tag-hover-background;
+    background-color: $article-tag-hover-background-color;
     outline: none;
 }

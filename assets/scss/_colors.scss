@@ -1,47 +1,46 @@
 /* Blocks of elements */
-$article-item-title: rgba(#1a1a1a, 1);
-$article-item-byline: rgba(#4d4d4d, 1);
-$article-item-description: rgba(#333333, 1);
-$article-item-image-shadow: rgba(#000000, 0.5);
-$article-item-separator: rgba(#c8c8c8, 1);
+$article-item-title-color: rgba(#1a1a1a, 1);
+$article-item-byline-color: rgba(#4d4d4d, 1);
+$article-item-description-color: rgba(#333333, 1);
+$article-item-image-shadow-color: rgba(#000000, 0.5);
+$article-item-separator-color: rgba(#c8c8c8, 1);
 
-$article-tag-title: rgba(#4d4d4d, 1);
-$article-tag-outline: rgba(#4b4b4b, 1);
-$article-tag-background: rgba(#1d2d33, 1);
-$article-tag-hover-background: rgba(#3a5a66, 1);
+$article-tag-title-color: rgba(#4d4d4d, 1);
+$article-tag-outline-color: rgba(#4b4b4b, 1);
+$article-tag-background-color: rgba(#1d2d33, 1);
+$article-tag-hover-background-color: rgba(#3a5a66, 1);
 
-$background: rgba(#f2f2f2, 1);
-$background-card: rgba(#f5f5f5, 1);
-$background-shadow: rgba(#000000, 0.15);
+$background-color: rgba(#f2f2f2, 1);
+$background-card-color: rgba(#f5f5f5, 1);
+$background-shadow-color: rgba(#000000, 0.15);
 
-$footer-background: rgba(#1d2d33, 1);
-$footer-text: rgba(#ffffff, 1);
+$footer-background-color: rgba(#1d2d33, 1);
+$footer-text-color: rgba(#ffffff, 1);
 
-$header-background: rgba(#1d2d33, 1);
-$header-title: rgba(#ffffff, 1);
-$header-link: rgba(#0045c2, 1);
-$header-shadow: rgba(#1d2d33, 0.3);
+$header-background-color: rgba(#1d2d33, 1);
+$header-title-color: rgba(#ffffff, 1);
+$header-link-color: rgba(#0045c2, 1);
+$header-shadow-color: rgba(#1d2d33, 0.3);
 
-$paginator-link: rgba(#000000, 1);
-$paginator-link-background: transparent;
-$paginator-link-hover-background: rgba(#cddde1, 1);
-$paginator-current: rgba(#ffffff, 1);
-$paginator-current-background: rgba(#2f4953, 1);
-$paginator-navigator: rgba(#000000, 1);
-$paginator-navigator-hover: rgba(#2f4953, 1);
+$paginator-link-color: rgba(#000000, 1);
+$paginator-link-background-color: transparent;
+$paginator-link-hover-background-color: rgba(#cddde1, 1);
+$paginator-current-color: rgba(#ffffff, 1);
+$paginator-current-background-color: rgba(#2f4953, 1);
+$paginator-navigator-color: rgba(#000000, 1);
+$paginator-navigator-hover-color: rgba(#2f4953, 1);
 
-$tag-badge-background: rgba(#1d6065, 1);
-$tag-badge-text: rgba(#ffffff, 1);
+$tag-badge-background-color: rgba(#1d6065, 1);
+$tag-badge-text-color: rgba(#ffffff, 1);
 
 
 /* Common HTML elements for reading section */
 $link-color: rgba(#20606c, 1);
-$link-visited: rgba(#551a8b, 1);
-$link-active: rgba(#5f9090, 1);
+$link-visited-color: rgba(#551a8b, 1);
+$link-active-color: rgba(#5f9090, 1);
 
-$pre-background: rgba(#d9dde0, 1);
-$pre-border: rgba(#9da2a4, 1);
+$pre-background-color: rgba(#d9dde0, 1);
 
-$table-thead-background: rgba(#343f44, 1);
-$table-border: rgba(#ccc, 1);
-$table-tr-background-darker: rgba(#e3e3e3, 1);
+$table-thead-background-color: rgba(#343f44, 1);
+$table-border-color: rgba(#ccc, 1);
+$table-tr-background-darker-color: rgba(#e3e3e3, 1);
