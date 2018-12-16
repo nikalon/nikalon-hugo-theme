@@ -15,7 +15,7 @@ This theme was designed against **Hugo v0.49.2 extended**. Your installation of 
 ## Setting up
 To apply this theme to your Hugo website follow this instructions. Clone or get a fresh copy of this repository.
 
-```
+```sh
 git clone https://github.com/nikalon/nikalon-hugo-theme
 ```
 
@@ -23,13 +23,13 @@ Now copy the root directory named **nikalon-hugo-theme** and paste it into the *
 
 We're almost done! Now we need to set some things up. Open **config.toml** from your website project and set the **theme** variable to **nikalon-hugo-theme** like the following example:
 
-```
+```toml
 theme = "nikalon-hugo-theme"
 ```
 
 ### [OPTIONAL] Enable syntax highlighting
 You can skip this part if you don't need to display code blocks into your website. Set the following variables into **config.toml** to enable code highlighting:
-```
+```toml
 pygmentsCodefences = true
 pygmentsUseClasses = true
 pygmentsOptions = "linenos=table"
@@ -52,7 +52,7 @@ Define a **cover** parameter in the front matter of your article. The value has 
 
 For example, say you have a picture stored in `static/img/super-duper-picture.png` that you want to use. In your front matter you can set it this way:
 
-```
+```yaml
 cover: "img/super-duper-picture.png"
 ```
 
@@ -63,13 +63,13 @@ Set an **author** parameter and set it to the name of the author.
 
 For example, if you want to make **Foo Bass** as the author of the article you can set it this way:
 
-```
+```yaml
 author: "Foo Bass"
 ```
 
 **Recommendation:** If you want to fill in the author automatically every time you create a new post add the following parameter in `config.toml`
 
-```
+```toml
 [params]
   author = "Foo Bass"
 ```
@@ -81,7 +81,7 @@ Tags are a way to group different articles based on the same topic.
 
 To add tags to your article add the following parameter in the front matter:
 
-```
+```yaml
 tags: ["technology", "arts", "music"]
 ```
 
@@ -96,7 +96,7 @@ You can put a custom [Creative Commons](https://creativecommons.org/choose/) cop
 * ### Footer links
 Modify `config.toml` to add the following variable:
 
-```
+```toml
 [params]
   footerLinks = ["about", "contact", "post"]
 ```
@@ -105,11 +105,10 @@ You can add as many pages in **footerLinks** as you want. But keep in mind that 
 
 In the example above it's expected to have the following pages created or otherwise the links will not be created:
 
-```
-content/about/_index.md
-content/contact/_index.md
-content/post/_index.md
-```
+* content/about/_index.md
+* content/contact/_index.md
+* content/post/_index.md
+
 ## Translations
 Currently only english and spanish languages are officially supported. However, it doesn't stop you from using this theme for your native tongue. If you need it you can add support for a new language or override the current text lines that are bundled with this theme.
 
@@ -124,7 +123,7 @@ Now open the file `themes/nikalon-theme/i18n/en.toml`, copy all the contents and
 ### 3. Translate!
 You're going to see the following structure:
 
-```
+```toml
 [AllTags]
 other = "All tags"
 
@@ -134,7 +133,7 @@ other = "Tags"
 
 What you have to change is the value of `other`. For example, if you want to translate the string **"All tags"** into french you have to write something like:
 
-```
+```toml
 [AllTags]
 other = "Toutes les étiquettes"
 ```
@@ -145,7 +144,7 @@ As of Hugo v0.51 there's still no support for localized dates. It means that the
 
 Create the directory `data/i18n`. Next copy the file `themes/nikalon-theme/data/i18n/months.json` and paste into the directory that you've just created. When you open the file you're going to see the following structure:
 
-```
+```json
 {
     "es": {
         "1": "Enero",
@@ -160,7 +159,7 @@ You can override the months for spanish or create the translations for a new lan
 
 For example, if you want to add the translation for italian the structure should be this:
 
-```
+```json
 {
     "es": {
         "1": "Enero",
