@@ -5,12 +5,8 @@
          url("/fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
-/* General fonts go here and special fonts go to individual SCSS files */
-body * {
-    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
-}
-
-.reading-font, .reading-font * {
-    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
-    line-height: 1.6;
-}
+// Variables
+$default-font: "Segoe UI", "Verdana", "Arial", sans-serif;
+$reading-font: "Segoe UI", "Verdana", "Arial", sans-serif;
+$heading-font: "Montserrat", "Verdana", "Arial", sans-serif;
+$code-font: "Lucida Console", monospace;

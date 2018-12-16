@@ -1,5 +1,6 @@
-@import './article_item.scss';
-@import './colors.scss';
+@import 'article_item';
+@import 'colors';
+@import 'fonts';
 
 .main {
     flex: 1 0 auto;
@@ -15,6 +16,11 @@
     border: none;
     max-width: 880px;
     box-sizing: border-box;
+}
+
+.reading-font, .reading-font * {
+    font-family: $reading-font;
+    line-height: 1.6;
 }
 
 @media (min-width: 500px) {
@@ -36,7 +42,7 @@
 
 // General style for headers
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", "Verdana", "Arial", sans-serif !important;
+    font-family: $heading-font !important;
 }
 
 
@@ -63,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     code, code * {
-        font-family: "Lucida Console", monospace;
+        font-family: $code-font;
     }
 
     // Hack to avoid to select code blocks
@@ -91,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
             background-color: $table-thead-background-color;
 
             * {
-                font-family:  "Montserrat", "Verdana", "Arial", sans-serif;
+                font-family: $heading-font;
             }
         }
 

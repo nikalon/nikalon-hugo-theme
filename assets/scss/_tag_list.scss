@@ -1,4 +1,5 @@
-@import './colors.scss';
+@import 'colors';
+@import 'fonts';
 
 .title {
     margin: 0;
@@ -7,7 +8,7 @@
 }
 
 .title > * {
-    font-family: "Montserrat", "Verdana", "Arial", sans-serif;
+    font-family: $heading-font;
 }
 
 .title-link {
