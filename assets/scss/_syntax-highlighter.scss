@@ -1,10 +1,17 @@
+/* 
+    Styles for code blocks. It's a bit hacky because I have
+    no control over the generation of the HTML code block
+*/
+
+@mixin user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
+}
+
 .highlight {
     margin: 18px 0;
-
-    * {
-        font-family: monospace;
-        font-size: 1.4rem;
-    }
 
     .chroma {
         color: #f8f8f2;
@@ -29,12 +36,7 @@
                 background-color: #3b3b42;
                 position: sticky;
                 left: 0;
-
-                // Disable text selection
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+                @include user-select(none); // Disable text selection
 
                 .chroma {
                     // Hack for disabling background color to avoid to set the background color twice
@@ -318,11 +320,5 @@
         .gu {
             color: #75715e;
         }    
-    }
-}
-
-@media (min-width: 500px) {
-    .highlight * {
-        font-size: 1.6rem;
     }
 }

@@ -1,10 +1,10 @@
 @import './colors.scss';
 
 .header {
+    padding: 1.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7rem;
     background-color: $header-background;
     box-shadow: 0 0 1px 3px $header-shadow;
     z-index: 100;
@@ -12,17 +12,10 @@
 
 .header__title {
     color: $header-title;
-    font-size: 1.4rem;
     text-decoration: none;
 }
 
-@media (min-width: 600px) {
-    .header__title {
-        font-size: 1.6rem;
-    }
-}
-
-.header__title > h1 {
+.header__title * {
     margin: 0;
     font-family: "Montserrat", "Verdana", "Arial", sans-serif;
 }

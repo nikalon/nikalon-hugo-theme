@@ -62,22 +62,13 @@ h1, h2, h3, h4, h5, h6 {
         margin: 4rem 0 1rem 0;
     }
 
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1.2em;
+    code, code * {
+        font-family: "Lucida Console", monospace;
     }
 
     // Hack to avoid to select code blocks
     pre:not(.chroma) {
         padding: 10px;
-        border: 1px solid $pre-border;
         border-radius: 3px;
         white-space: normal;
         background-color: $pre-background;
@@ -108,5 +99,10 @@ h1, h2, h3, h4, h5, h6 {
             border: 1px solid $table-border;
             padding: 4px 15px;
         }
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 3px;
     }
 }

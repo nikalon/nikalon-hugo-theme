@@ -7,16 +7,10 @@
 
 /* General fonts go here and special fonts go to individual SCSS files */
 body * {
-    font-family: "Verdana", "Arial", sans-serif;
+    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
 }
 
 .reading-font, .reading-font * {
-    font-family: "Verdana", "Arial", sans-serif;
+    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
     line-height: 1.6;
-}
-
-@media (min-width: 600px) {
-    .reading-font, .reading-font * {
-        font-size: 1.8rem;
-    }
 }
