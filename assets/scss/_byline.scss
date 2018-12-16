@@ -3,15 +3,8 @@
 .byline {
     margin: 0.8rem 0;
     color: $article-item-byline;
-    font-size: 1.2rem;
 }
 
 .byline__publication-date::before {
     content: "•";
-}
-
-@media (min-width: 600px) {
-    .byline {
-        font-size: 1.4rem;
-    }
 }

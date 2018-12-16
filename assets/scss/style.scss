@@ -1,4 +1,4 @@
-@import './colors.scss';
+@import 'colors';
 
 html {
     margin: 0;
@@ -14,13 +14,13 @@ body {
     background-color: $background;
 }
 
-@import './byline.scss';
-@import './footer.scss';
-@import './header.scss';
-@import './main.scss';
-@import './paginator.scss';
-@import './fonts.scss';
-@import './single.scss';
-@import './syntax-highlighter.scss';
-@import './tag_list.scss';
-@import './tag_terms.scss'
+@import 'byline';
+@import 'footer';
+@import 'header';
+@import 'main';
+@import 'paginator';
+@import 'fonts';
+@import 'single';
+@import 'syntax-highlighter';
+@import 'tag_list';
+@import 'tag_terms';
