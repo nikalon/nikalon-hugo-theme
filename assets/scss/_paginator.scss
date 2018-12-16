@@ -24,9 +24,9 @@
     height: 3rem;
     width: 3rem;
 
-    color: $paginator-link;
+    color: $paginator-link-color;
     border-radius: 50%;
-    background-color: $paginator-link-background;
+    background-color: $paginator-link-background-color;
 
     text-align: center;
     text-decoration: none;
@@ -34,17 +34,17 @@
 }
 
 .paginator__page__link:hover {
-    background-color: $paginator-link-hover-background;
+    background-color: $paginator-link-hover-background-color;
 }
 
 .paginator__page__link--current {
-    color: $paginator-current;
-    background-color: $paginator-current-background !important;
+    color: $paginator-current-color;
+    background-color: $paginator-current-background-color !important;
 }
 
 // Side link navigators
 .paginator__page__navigator {
-    color: $paginator-navigator;
+    color: $paginator-navigator-color;
     height: 3rem;
     line-height: 3rem;
     text-decoration: none;
@@ -52,7 +52,7 @@
 }
 
 .paginator__page__navigator:hover {
-    color: $paginator-navigator-hover;
+    color: $paginator-navigator-hover-color;
 }
 
 .paginator__page__navigator:focus {
@@ -61,7 +61,7 @@
 }
 
 .paginator__page__navigator:active {
-    color: $paginator-navigator-hover;
+    color: $paginator-navigator-hover-color;
     outline: none;
 }
 

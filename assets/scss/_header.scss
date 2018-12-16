@@ -5,13 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $header-background;
-    box-shadow: 0 0 1px 3px $header-shadow;
+    background-color: $header-background-color;
+    box-shadow: 0 0 1px 3px $header-shadow-color;
     z-index: 100;
 }
 
 .header__title {
-    color: $header-title;
+    color: $header-title-color;
     text-decoration: none;
 }
 
