@@ -2,6 +2,7 @@
     Styles for code blocks. It's a bit hacky because I have
     no control over the generation of the HTML code block
 */
+@import 'colors';
 
 @mixin user-select($value) {
     -moz-user-select: $value;
@@ -14,8 +15,8 @@
     margin: 18px 0;
 
     .chroma {
-        color: #f8f8f2;
-        background-color: #272822;
+        color: $code-font-default-color;
+        background-color: $code-background-color;
         border-radius: 3px;
         overflow: auto;
 
@@ -33,7 +34,7 @@
             // Line number row
             .lntd:nth-child(1) {
                 padding: 0 8px;
-                background-color: #3b3b42;
+                background-color: $code-line-background-color;
                 position: sticky;
                 left: 0;
                 @include user-select(none); // Disable text selection
@@ -57,248 +58,248 @@
 
         // Error
         .err {
-            color: #960050;
-            background-color: #1e0010;
+            color: $code-error-color;
+            background-color: $code-error-background-color;
         }
 
         // Keyword
         .k {
-            color: #66d9ef;
+            color: $code-keyword-color;
         }
 
         // KeywordConstant
         .kc {
-            color: #66d9ef;
+            color: $code-keyword-constant-color;
         }
 
         // KeywordDeclaration
         .kd {
-            color: #66d9ef;
+            color: $code-keyword-declaration-color;
         }
 
         // KeywordNamespace
         .kn {
-            color: #f92672;
+            color: $code-keyword-namespace-color;
         }
 
         // KeywordPseudo
         .kp {
-            color: #66d9ef;
+            color: $code-keyword-pseudo-color;
         }
 
         // KeywordReserved
         .kr {
-            color: #66d9ef;
+            color: $code-keyword-reserved-color;
         }
 
         // KeywordType
         .kt {
-            color: #66d9ef;
+            color: $code-keyword-type-color;
         }
 
         // NameAttribute
         .na {
-            color: #a6e22e;
+            color: $code-name-attribute-color;
         }
 
         // NameClass
         .nc {
-            color: #a6e22e;
+            color: $code-name-class-color;
         }
         
         // NameConstant
         .no {
-            color: #66d9ef;
+            color: $code-name-constant-color;
         }
         
         // NameDecorator
         .nd {
-            color: #a6e22e;
+            color: $code-name-decorator-color;
         }
         
         // NameException
         .ne {
-            color: #a6e22e;
+            color: $code-name-exception-color;
         }
         
         // NameFunction
         .nf {
-            color: #a6e22e;
+            color: $code-name-function-color;
         }
         
         // NameOther
         .nx {
-            color: #a6e22e;
+            color: $code-name-other-color;
         }
         
         // NameTag
         .nt {
-            color: #f92672;
+            color: $code-name-tag-color;
         }
         
         // Literal
         .l {
-            color: #ae81ff;
+            color: $code-literal-color;
         }
         
         // LiteralDate
         .ld {
-            color: #e6db74;
+            color: $code-literal-date-color;
         }
         
         // LiteralString
         .s {
-            color: #e6db74;
+            color: $code-literal-string-color;
         }
         
         // LiteralStringAffix
         .sa {
-            color: #e6db74;
+            color: $code-literal-string-affix-color;
         }
         
         // LiteralStringBacktick
         .sb {
-            color: #e6db74;
+            color: $code-literal-string-backtick-color;
         }
         
         // LiteralStringChar
         .sc {
-            color: #e6db74;
+            color: $code-literal-string-char-color;
         }
         
         // LiteralStringDelimiter
         .dl {
-            color: #e6db74;
+            color: $code-literal-string-delimiter-color;
         }
         
         // LiteralStringDoc
         .sd {
-            color: #e6db74;
+            color: $code-literal-string-doc-color;
         }
         
         // LiteralStringDouble
         .s2 {
-            color: #e6db74;
+            color: $code-literal-string-double-color;
         }
         
         // LiteralStringEscape
         .se {
-            color: #ae81ff;
+            color: $code-literal-string-escape-color;
         }
         
         // LiteralStringHeredoc
         .sh {
-            color: #e6db74;
+            color: $code-literal-string-heredoc-color;
         }
         
         // LiteralStringInterpol
         .si {
-            color: #e6db74;
+            color: $code-literal-string-interpol-color;
         }
         
         // LiteralStringOther
         .sx {
-            color: #e6db74;
+            color: $code-literal-string-other-color;
         }
         
         // LiteralStringRegex
         .sr {
-            color: #e6db74;
+            color: $code-literal-string-regex-color;
         }
         
         // LiteralStringSingle
         .s1 {
-            color: #e6db74;
+            color: $code-literal-string-single-color;
         }
         
         // LiteralStringSymbol
         .ss {
-            color: #e6db74;
+            color: $code-literal-string-symbol-color;
         }
         
         // LiteralNumber
         .m {
-            color: #ae81ff;
+            color: $code-literal-number-color;
         }
         
         // LiteralNumberBin
         .mb {
-            color: #ae81ff;
+            color: $code-literal-number-bin-color;
         }
         
         // LiteralNumberFloat
         .mf {
-            color: #ae81ff;
+            color: $code-literal-number-float-color;
         }
         
         // LiteralNumberHex
         .mh {
-            color: #ae81ff;
+            color: $code-literal-number-hex-color;
         }
         
         // LiteralNumberInteger
         .mi {
-            color: #ae81ff;
+            color: $code-literal-number-integer-color;
         }
         
         // LiteralNumberIntegerLong
         .il {
-            color: #ae81ff;
+            color: $code-literal-number-integer-long-color;
         }
         
         // LiteralNumberOct
         .mo {
-            color: #ae81ff;
+            color: $code-literal-number-oct-color;
         }
         
         // Operator
         .o {
-            color: #f92672;
+            color: $code-operator-color;
         }
         
         // OperatorWord
         .ow {
-            color: #f92672;
+            color: $code-operator-word-color;
         }
         
         // Comment
         .c {
-            color: #75715e;
+            color: $code-comment-color;
         }
         
         // CommentHashbang
         .ch {
-            color: #75715e;
+            color: $code-comment-hashbang-color;
         }
         
         // CommentMultiline
         .cm {
-            color: #75715e;
+            color: $code-comment-multiline-color;
         }
         
         // CommentSingle
         .c1 {
-            color: #75715e;
+            color: $code-comment-single-color;
         }
         
         // CommentSpecial
         .cs {
-            color: #75715e;
+            color: $code-comment-special-color;
         }
         
         // CommentPreproc
         .cp {
-            color: #75715e;
+            color: $code-comment-preproc-color;
         }
         
         // CommentPreprocFile
         .cpf {
-            color: #75715e;
+            color: $code-comment-preproc-file-color;
         }
         
         // GenericDeleted
         .gd {
-            color: #f92672;
+            color: $code-generic-deleted-color;
         }
         
         // GenericEmph
@@ -308,7 +309,7 @@
         
         // GenericInserted
         .gi {
-            color: #a6e22e;
+            color: $code-generic-inserted-color;
         }
         
         // GenericStrong
@@ -318,7 +319,7 @@
         
         // GenericSubheading
         .gu {
-            color: #75715e;
+            color: $code-generic-subheading-color;
         }    
     }
 }
