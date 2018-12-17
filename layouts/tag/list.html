@@ -1,7 +1,7 @@
 {{- define "main" -}}
     <div class="main-container">
         <main class="main">
-            <h2 class="title title-2">{{ T "TaggedAs" . | safeHTML }}</h2>
+            <h2 class="title title-2 header-2">{{ T "TaggedAs" . | safeHTML }}</h2>
             {{- $tags := "tags" -}}
             <a href="{{ $tags | relURL }}" class="title-link"><h3 class="title title-3">{{ T "SeeAllTags" }}</h3></a>
             {{- $paginator := .Paginator -}}

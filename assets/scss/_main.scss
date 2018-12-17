@@ -40,6 +40,16 @@
 }
 
 
+// Header sizes
+.header-1 {
+    font-size: $header-1-font-size;
+}
+
+.header-2 {
+    font-size: $header-2-font-size;
+}
+
+
 // General style for headers
 h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font !important;
@@ -66,6 +76,30 @@ h1, h2, h3, h4, h5, h6 {
 
     h1, h2, h3, h4, h5, h6 {
         margin: 4rem 0 1rem 0;
+    }
+
+    h1 {
+        font-size: $header-1-font-size;
+    }
+
+    h2 {
+        font-size: $header-2-font-size;
+    }
+
+    h3 {
+        font-size: $header-3-font-size;
+    }
+
+    h4 {
+        font-size: $header-4-font-size;
+    }
+
+    h5 {
+        font-size: $header-5-font-size;
+    }
+
+    h6 {
+        font-size: $header-6-font-size;
     }
 
     code, code * {
