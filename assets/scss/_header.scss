@@ -14,9 +14,14 @@
 .header__title {
     color: $header-title-color;
     text-decoration: none;
+    font-size: $header-title-font-size;
 }
 
 .header__title * {
     margin: 0;
     font-family: $heading-font;
+
+    // Avoids to add up font size as we are already
+    // setting it from .header__title
+    font-size: inherit;
 }

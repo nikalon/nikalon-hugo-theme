@@ -5,8 +5,22 @@
          url("/fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
-// Variables
+// Font families
 $default-font: "Segoe UI", "Verdana", "Arial", sans-serif;
 $reading-font: "Segoe UI", "Verdana", "Arial", sans-serif;
 $heading-font: "Montserrat", "Verdana", "Arial", sans-serif;
 $code-font: "Lucida Console", monospace;
+
+// Sizes
+$header-title-font-size: 1.8em;
+$header-1-font-size: 1.6em;
+$header-2-font-size: 1.3em;
+$header-3-font-size: 1.2em;
+$header-4-font-size: 1.1em;
+$header-5-font-size: 1.1em;
+$header-6-font-size: 1.1em;
+
+$byline-font-size: 0.8em;
+
+$tags-font-size: 1.2rem;
+$tags-title-font-size: 0.9em;

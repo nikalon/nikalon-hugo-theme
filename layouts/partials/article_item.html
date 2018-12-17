@@ -3,7 +3,7 @@
         {{- if and (isset .Params "cover") (ne .Params.cover "") -}}
             <img class="article__cover" src="{{ .Params.cover | relURL }}" alt="{{ .Title }}">
         {{- end -}}
-        <h1 class="article__title">{{- .Title -}}</h1>
+        <h1 class="article__title header-1">{{- .Title -}}</h1>
     </a>
     {{ partial "byline.html" . }}
     <p class="article__description reading-font">{{- .Summary -}}</p>

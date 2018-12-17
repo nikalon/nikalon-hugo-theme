@@ -1,8 +1,10 @@
 @import 'colors';
+@import 'fonts';
 
 .byline {
     margin: 0.8rem 0;
     color: $article-item-byline-color;
+    font-size: $byline-font-size;
 }
 
 .byline__publication-date::before {
