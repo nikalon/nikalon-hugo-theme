@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 3px;
         white-space: normal;
         background-color: $pre-background-color;
+        font-size: $code-font-size;
     }
 
     // Hack to avoid to select code blocks
