@@ -115,6 +115,18 @@ h1, h2, h3, h4, h5, h6 {
         font-size: $code-font-size;
     }
 
+    blockquote {
+        margin: 0;
+        padding: 0 0 0 2rem;
+        border-left: 4px solid $blockquote-border-color;
+    }
+
+    @media (min-width: 500px) {
+        blockquote {
+            margin: 0 0 0 2rem;
+        }
+    }
+
     // Hack to avoid to select code blocks
     table:not(.lntable) {
         display: inline-block;
